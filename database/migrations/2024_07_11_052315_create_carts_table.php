@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('user_id');
-            // $table->foreign('user_id')->refrences('id')->on('users');
-            $table->foreignId('user_id') ->constrained(
-                table: 'users', indexName: 'id'
-            )->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id','fk_id')->references('id')->on('users');
+            
             $table->timestamps();
         });
     }

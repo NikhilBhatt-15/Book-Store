@@ -13,15 +13,18 @@ return new class extends Migration
     {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('cart_id');
-            // $table->foreign('cart_id')->refrencing('id')->on('carts');
-            $table->foreignId('cart_id')->constrained(
-                table:'carts',indexName:'id'
-            )->onDelete('cascade');
-            // $table->unsignedBigInteger('book_id');
-            // $table->foreign('book_id')->refrencing('id')->on('books');
-            $table->foreignId('book_id')->constrained(table:'books',indexName:'id')->onDelete('cascade');
+
+            $table->unsignedBigInteger('cart_id');
+            $table->unsignedBigInteger('book_id');
+            // $table->foreignId('cart_id')->constrained(
+            //     table:'carts',indexName:'id'
+            // )->onDelete('cascade');
+            
+            
+            // $table->foreignId('book_id')->constrained(table:'books',indexName:'id')->onDelete('cascade');
             $table->integer('quantity');
+            $table->foreign('book_id','fk_book_id')->references('id')->on('books');
+            $table->foreign('cart_id','fk_cart_id')->references('id')->on('carts');
             $table->timestamps();
         });
     }
