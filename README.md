@@ -1,26 +1,51 @@
-# Lumen PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+# Book Management System
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Overview
 
-> **Note:** In the years since releasing Lumen, PHP has made a variety of wonderful performance improvements. For this reason, along with the availability of [Laravel Octane](https://laravel.com/docs/octane), we no longer recommend that you begin new projects with Lumen. Instead, we recommend always beginning new projects with [Laravel](https://laravel.com).
+This project is a Book Management System that allows users to view books, add books to their cart, edit their profile, and more. The system includes an admin panel for managing books and categories, and a user interface for browsing and interacting with books.
 
-## Official Documentation
+## Features
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+- **Admin Panel:**
+  - Add, modify, and delete books
+  - Fetch all books and categories
+  - Handle book requests
+  - Manage users
+  - View and manage orders
 
-## Contributing
+- **User Interface:**
+  - View all books
+  - Add books to cart
+  - Edit profile
+  - Logout functionality
+  - View cart
+  - Increase/decrease quantity of books in cart
+  - Buy or rent books from cart
+  - Cart Checkout
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Technologies Used
 
-## Security Vulnerabilities
+- **Frontend:**
+  - React
+  - CSS (with custom styles and Bootstrap)
+  - Fetch API for HTTP requests
+  - MaterialUI 
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- **Backend:**
+  - PHP 
+  - Lumen Framework
+  - JWT Authentication
 
-## License
+## Installation
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Backend
+
+1. Clone the backend:
+   ```sh
+   git clone https://github.com/NikhilBhatt-15/Book-Store.git
+2 . Clone the frontend
+
+    git clone 
+
+
