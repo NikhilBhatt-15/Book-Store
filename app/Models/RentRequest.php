@@ -2,23 +2,24 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Cart extends Model
+
+class RentRequest extends Model
 {
 
-    public function users(){
-        return $this->belongsTo('App\Models\User');
-    }
-    public function cart_items(){
-        return $this->hasMany('App\Models\Cart_Items');
-    }
+    protected $table ='requests';
+
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+
+    
     protected $fillable = [
-        'user_id'
+        'user_id','book_id','status','returned'
     ];
 
     /**

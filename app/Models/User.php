@@ -19,6 +19,19 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      *
      * @var string[]
      */
+    public function orders(){
+        return $this->hasMany('App\Models\Order');
+
+    }
+    public function rent_requests(){
+        return $this->hasMany('App\Models\RentRequest');
+    }
+
+    public function carts(){
+        return $this->hasOne('App\Models\Cart');
+    }
+
+
     protected $fillable = [
         'name', 'email','address'
     ];

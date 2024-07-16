@@ -21,26 +21,51 @@ $router->get('/', function () use ($router) {
 // admin funcs
 $router->group(['prefix'=>'api/admin'],function($router){
     
-    $router->post('/addcategory','BookController@addCategory');
-    $router->post('/modifycategory','BookController@modifyCategory');
-    $router->post('/deletecategory','BookController@deleteCategory');
-    $router->get('/categories','BookController@categories');
+    $router->post('/addcategory','AdminController@addCategory');
+    $router->post('/modifycategory','AdminController@modifyCategory');
+    $router->post('/deletecategory','AdminController@deleteCategory');
+    $router->get('/getcategories','AdminController@categories');
 
-    $router->post('/addbook','BookController@addBook');
-    $router->post('/modifybook','BookController@modifyBook');
-    $router->post('/deletebook','BookController@deleteBook');
-    $router->get('/books','BookController@books');
+    $router->post('/addbook','AdminController@addBook');
+    $router->post('/modifybook','AdminController@modifyBook');
+    $router->post('/deletebook','AdminController@deleteBook');
+    $router->get('/getbooks','AdminController@books');
+    $router->post('/getcategorisedbooks','AdminController@getbook');
+    $router->get('/getrequests','AdminController@getRequests');
+    $router->post('/handlerequests','AdminController@handleRequest');
+    $router->post('/removerequest','AdminController@removeRequest');
 
+    $router->get('/getusers','AdminController@users');
+    $router->post('/removeuser','AdminController@removeUser');
+
+    $router->get('/getorders','AdminController@getOrders');
 
 });
 
+// user funcs
+$router->group(['prefix'=>'api/user'],function($router){
+    $router->post('/add','CartController@addItem');
+    $router->post('/remove','CartController@removeItem');
+    $router->post('/getcart','CartController@getcart');
+    $router->post('/updatecart','CartController@updateCart');
+    $router->post('/rent','RentController@rent');
+    $router->post('/rentrequests','RentController@rentRequests');
+    $router->post('/removerequest','RentController@removeRequest');
+    $router->post('/returnbook','RentController@returnBook');
+    $router->get('/getcategories','RentController@getCategories');
+    $router->post('/buy','OrderController@buy');
+    $router->get('/ownedbooks','OrderController@getbook');
+    $router->get('/getbooks','OrderController@getbooks');
+    $router->get('/getorders','OrderController@getOrders');
+});
+    
 
 // user login
 $router->group(['prefix'=>'api/user'],function($router){
     $router->post('/login','UserAuthController@login');
     $router->post('/logout','UserAuthController@logout');
     $router->post('/register','UserAuthController@register');
-    $router->post('/update','UserAuthController@update');
+    $router->post('/updateprofile','UserAuthController@update');
     $router->post('/profile','UserAuthController@profile');
     
 });
@@ -52,4 +77,5 @@ $router->group(['prefix'=>'api/admin'],function($router){
     $router->post('/logout','AdminAuthController@logout');
     $router->post('/register','AdminAuthController@register');
     $router->post('/profile','AdminAuthController@profile');
+    $router->post('/updateprofile','AdminAuthController@updateProfile');
 });

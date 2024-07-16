@@ -55,7 +55,9 @@ class UserAuthController extends Controller
         $user = auth()->user();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
+        if($request->password){
+            $user->password = Hash::make($request->password);
+        }
         $user->address = $request->address;
         $user->save();
         return response()->json($user);

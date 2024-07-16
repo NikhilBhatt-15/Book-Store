@@ -55,7 +55,14 @@ class AdminAuthController extends Controller
         return response()->json(['message' => 'Successfully logged out']);
     }
 
-    
+    public function updateProfile(Request $request){
+        Auth::guard('admin')->check();
+        $admin  = Auth::guard('admin')->user();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->save();
+        return response()->json($admin);
+    }
     protected function respondWithToken($token)
     {
         Auth::guard('admin')->check();

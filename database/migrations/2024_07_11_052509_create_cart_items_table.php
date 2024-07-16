@@ -23,7 +23,7 @@ return new class extends Migration
             
             // $table->foreignId('book_id')->constrained(table:'books',indexName:'id')->onDelete('cascade');
             $table->integer('quantity');
-            $table->foreign('book_id','fk_book_id')->references('id')->on('books');
+            $table->foreign('book_id','fk_book_id')->references('id')->on('books')->onDelete('cascade');
             $table->foreign('cart_id','fk_cart_id')->references('id')->on('carts');
             $table->timestamps();
         });

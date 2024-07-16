@@ -16,6 +16,10 @@ class Book extends Model
     public function categories(){
         return $this->belongsTo('App\Models\Category');
     }
+
+    public function orders(){
+        return $this->hasMany('App\Models\Order');
+    }
     /**
      * The attributes that are mass assignable.
      *
