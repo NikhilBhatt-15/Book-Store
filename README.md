@@ -46,10 +46,19 @@ This project is a Book Management System that allows users to view books, add bo
    git clone https://github.com/NikhilBhatt-15/Book-Store.git
 2 . Clone the frontend
 
+User Interface 
 ![Books page](https://github.com/user-attachments/assets/174cb1c6-c1f3-4ea8-9b0b-461896cef7e1)
+![Orders](https://github.com/user-attachments/assets/1c91e53b-ba49-491a-9b58-e76b3f30deb3)
+![Cart](https://github.com/user-attachments/assets/9abe11f5-6b41-4e84-9656-11c0eb0c21ae)
+![Rent Request](https://github.com/user-attachments/assets/dff59aa7-b93e-40c0-adec-665e443bd63d)
+![Profile](https://github.com/user-attachments/assets/b214979d-660c-4828-84a0-8dce8ac479cc)
 
+Admin DashBoard
+![Dashboard](https://github.com/user-attachments/assets/914ac689-976b-4d52-99d2-da9246297a78)
+![Add Books](https://github.com/user-attachments/assets/14376ded-252f-46f1-a938-f6a31077e8d9)
+![Rent Request Manage](https://github.com/user-attachments/assets/09e20540-f20f-4807-8d7a-f99e066c1733)
+![Users](https://github.com/user-attachments/assets/ac749092-2e2c-4c65-9fe1-766aa74b9441)
+![ALL Orders](https://github.com/user-attachments/assets/4eb317a3-0954-4f0a-b65f-eca709c2f7d8)
 
-
-    
 
 
